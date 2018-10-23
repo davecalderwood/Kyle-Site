@@ -1,32 +1,75 @@
 .App {
   text-align: center;
+  width: 100%;
+  position: absolute;
+  min-height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url('https://images.unsplash.com/photo-1519671844723-ff8eb5f7383f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9f8132932fcd9c6d5ab0b9bae3f73696&auto=format&fit=crop&w=1050&q=80Olijato.jpeg');
+  min-height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: static;
+  
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.Header {
+  background-color: lightgreen;
+  width: 100%;
+  height: 80px;
+  top: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.return {
+  position: relative;
+  top: -40px;
+  right: 700px;
+}
+.loginButton {
+    background-color: rgb(54, 65, 54);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position:relative;
+    transition: .5s ease;
+    top: 0px;
+    left: 600px;
+    right: 0px;
+    bottom: 0px;
+}
+.footer {
+  background-color: lightgreen;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  flex-direction: row;
+  float: left;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 50px;
+  width: 100%;
+  justify-content: space-around;
 }
-
-.App-link {
-  color: #61dafb;
+.about {
+  text-decoration: none; color: black;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact {
+  text-decoration: none; color: black;
+}
+.videos {
+  text-decoration: none; color: black;
+}
+.movie {
+  padding: 1%;
+}
+.search input[type=text] {
+  border: 1px solid #ce93d8;
+  box-shadow: 0 0 0 1px #ce93d8;
+  align-items: right;
 }
