@@ -22,7 +22,6 @@ class App extends Component {
         <div className="Header">
           <div className="login">
           <nav role="navigation">
-          
             <div id="menuToggle">
 
               <input type="checkbox" />

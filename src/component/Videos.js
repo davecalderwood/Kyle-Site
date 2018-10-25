@@ -5,9 +5,7 @@ class Videos extends Component {
     return (
         <div className="videos parallax">
         <div className="search">
-        <div className="filler">filler</div>
-
-        <form className="find" action="">
+          <form className="find" action="">
             <input type="search" placeholder="What are you looking for?"></input>
             <i class="icon"><img src="baseline-search-24px.svg" alt="search"></img></i>
         </form>
