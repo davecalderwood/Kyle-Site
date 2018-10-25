@@ -5,26 +5,38 @@ import React, { Component } from "react";
 class LoginPage extends Component {
     render(){
     return (
-        <div className="loginPage">
-        <h1>Login</h1>
-        <input type="search" required
-          id="email"
-          pattern="^(([-\w\d]+)(\.[-\w\d]+)*@([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2})$"
-          placeholder="Your Primary Email Address"
-          size="42"/>
-            
-          <input type="password" required
-          id="pass"
-          placeholder="Password" />
+        <div className="logreg">
+        <div className="filler">filler</div>
+    <form>
+    <div className="input-field">
+    <h3>Username</h3>
+        <label for="userName"></label>
+        <input type="text" class="form-control" id="userName" aria-describedby="User" placeholder="Enter your Username here..."></input>
+        <small id="userHelp" class="form-text text-muted"></small>
+    </div>
+    <h3>Password</h3>
+    <div className="input-field">
+        <label for="exampleInputPassword1"></label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password here..."></input>
+    </div><br/>
 
-          <input type="submit"
-          ref={(input) => this.input = input} 
-          value="Login" />
+    <button className="button-submit">Submit</button>
+    <h5>sample text</h5>
+    <h5>sample text</h5>
+    <h5>sample text</h5>
+    <h5>sample text</h5>
+    <h5>sample text</h5>
+    <h5>sample text</h5>
+    <h5>sample text</h5>
+    <h5>sample text</h5>
+    <h5>sample text</h5>
+    <h5>sample text</h5>
+    </form>
 
-        </div>
-        
-
+    </div>
         // Not Registered? You can do so here.
+
+        
     )
     }
 }

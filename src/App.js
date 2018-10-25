@@ -4,33 +4,49 @@ import About from './component/About'
 import Contact from './component/Contact'
 import Videos from './component/Videos'
 import Forms from './using-forms/Forms'
-// import LoginPage from './using-forms/LoginPage'
+import loginPage from './using-forms/LoginPage'
 import Home from './component/Home'
+import Input from './using-forms/Forms'
 import './App.css';
 
 
 class App extends Component {
   render() {
     return (
+
       <Router>
       <div className="App">
-        
+      <div class="box"><b></b></div>
       {/* Create a basic framework for the site, I need a header with navigation, maybe a sign in so when Kyle posts they get notifications */}
-      {/* Try out the hamburger menu */}
-
+      {/* Hamburger menu */}     
         <div className="Header">
           <div className="login">
+          <nav role="navigation">
           
-          <Link to="/Forms">
+            <div id="menuToggle">
+
+              <input type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+
+              <ul id="menu">
+                <a href="/"><li>Home</li></a>
+                <a href="/about"><li>About</li></a>
+                <a href="/videos"><li>Videos</li></a>
+                <a href="/contact"><li>Contact</li></a>
+                <a href="/loginPage"><li>Sign In</li></a>
+                <a href="/input"><li>Add Video</li></a>
+              </ul>
+            </div>
+          </nav>
+          
+          {/* <Link to="/loginPage">
             <button type="button" className="loginButton">Login or Register
             </button>
-            </Link>
+            </Link> */}
           </div>
           
-        <Link to="/">
-          <div className="return"><img src="baseline-home-24px.svg" alt="home"></img>
-          </div>    
-        </Link> 
         </div>
 
         <div className="main">
@@ -40,8 +56,8 @@ class App extends Component {
           <Route path="/videos" component={Videos} />
           <Route path="/contact" component={Contact} />
           <Route path="/forms" component={Forms} />
-          {/* <h1 className="title">Kyle's Website built by me</h1> */}
-
+          <Route path="/loginPage" component={loginPage} />
+          <Route path="/input" component={Input} />
         
         </div>
 

@@ -3,23 +3,14 @@ import React, { Component } from "react";
 class Videos extends Component {
     render(){
     return (
-        <div className="home">
+        <div className="videos parallax">
         <div className="search">
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
-            <form action="/hms/accommodations" method="GET"> 
-            <div class="row">
-                <div class="col-xs-6 col-md-4">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search" id="txtSearch"/>
-                    <div class="input-group-btn">
-                    <button class="btn btn-primary" type="submit">
-                        <span class="glyphicon glyphicon-search"></span>
-                    </button>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </form>
+        <div className="filler">filler</div>
+
+        <form className="find" action="">
+            <input type="search" placeholder="What are you looking for?"></input>
+            <i class="icon"><img src="baseline-search-24px.svg" alt="search"></img></i>
+        </form>
         {/* Sample videos pulled from Kyle's YouTube profile. */}
         <h3>UVU Player Profile 01 | Brianna Moeller</h3>
         <iframe className="movie" width="560" height="315" title="UVU Player Profile 01 | Brianna Moeller"
