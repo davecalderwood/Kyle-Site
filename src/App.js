@@ -17,13 +17,14 @@ class App extends Component {
       <Router>
       <div className="App">
       <div class="box"><b></b></div>
-      {/* Create a basic framework for the site, I need a header with navigation, maybe a sign in so when Kyle posts they get notifications */}
-      {/* Hamburger menu */}     
+      {/* Create a basic framework for the site, I need a header with navigation, a footer with more navigaion */}
+      {/* Hamburger menu with all of the navigation locations*/}     
         <div className="Header">
           <div className="login">
           <nav role="navigation">
             <div id="menuToggle">
 
+              {/* The checkbox makes it clickable and the three span tags are the three lines that collapse into an X on click */}
               <input type="checkbox" />
               <span></span>
               <span></span>

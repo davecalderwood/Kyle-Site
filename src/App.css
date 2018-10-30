@@ -3,7 +3,6 @@
   width: 100%;
   position: absolute;
   min-height: 100%;
-  
 }
 .Header {
   background-color: lightgreen;
@@ -16,23 +15,6 @@
   top: -50px;
   right: 670px;
 }
-/* .loginButton {
-  background-color: rgb(54, 65, 54);
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  position:relative;
-  transition: .5s ease;
-  top: 0px;
-  left: 600px;
-  right: 0px;
-  bottom: 0px;
-} */
 .footer {
   background-color: lightgreen;
   position: fixed;
@@ -68,11 +50,21 @@
 .filler {
   color: transparent;
 }
-.home-img {
-  width: 75px;
-}
 .logreg {
   background-color: rgb(139, 156, 161);
+}
+.developer {
+  border: 1px solid black;
+  width: 10%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  height: 78px;
+  background-color: lightblue;
+}
+.developer:hover {
+  opacity: 2;
 }
 /* --------------------------------------------------- Menu -------------------------------------------------------------- */
 #menuToggle
@@ -93,7 +85,7 @@
   position: absolute;
   top: -7px;
   left: -5px;
-  cursor: pointer;
+  cursor: pointer; /* Makes the click icon on hover */
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */
   -webkit-touch-callout: none;
@@ -171,33 +163,40 @@
 {
   transform: none;
 }
-/* ------------------------------------- Login Page -------------------------------------- */
+/* ------------------------------------- Animated button and input fields ------------------------------------------ */
 .button-submit {
-  font-size: 125%;
+  font-size: 1em;
   height: 50px;
   width: 10%;
-  /* border: 2px solid black; */
 	background: #4593b9;
 	color: #f2f2f2;
 	padding: -10px;
-	border-radius: 5px;
+	border-radius: 50px;
 	position: relative;
 	box-sizing: border-box;
   transition: all 500ms ease; 
   transform-style: preserve-3d;
+  cursor: pointer;
 }
 .button-submit:after {
-	top: 100%;
-	left: 0px;
+	top: 50%;
+  left: 0px;
+  border: 1px solid white;
   width: 100%;
   height: 50px;
 	position: absolute;
   background: #3a9999;
-  /* border: 2px solid black; */
-	border-radius: 5px;
-	content: 'Enter';
-	transform-origin: left bottom;
+	border-radius: 50px;
+  content: 'Enter';
+  font-size: 1em;
+  vertical-align: middle;
+  align-content: center;
+  transform-origin: left bottom;
+  margin-top: -50px;
+  white-space: nowrap;
   transform: rotateX(90deg);
+  cursor: pointer;
+  text-align: center;
 } 
 .button-submit:hover {
   transform-origin: center bottom;
@@ -205,22 +204,41 @@
 }
 input[type=text] {
   width: 30%;
+  font-size: 1em;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
 }
 input[type=password] {
   width: 30%;
+  font-size: 1em;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
 }
-/* --------------------------- Searchbar --------------------------------- */
+.skills {
+  cursor: pointer;
+  outline: none;
+  color: rgb(0, 0, 0);
+  background-color: rgb(76, 175, 158);
+  border-radius: 15px;
+  box-shadow: 0 7px #999;
+  height: 30px;
+  font-size: 1em;
+}
+.skills:hover {
+  background-color: #4068b1;
+}
+.skills:active {
+  background-color: #4068b1;
+  box-shadow: 0 5px #666;
+  transform: translateY(3px);
+}
+/* ----------------------------------------------------- Searchbar -------------------------------------------------------------- */
 .find{
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  left: 75%;
+  transform: translate(-50%,50%);
   transition: all 1s;
   width: 50px;
   height: 50px;
@@ -245,7 +263,7 @@ input[type=search] {
   border-radius: 20px;
   padding: 0 20px;
 }
-/* Add the search icon and the elements required for that */
+/* Add the search icon in the circle on the right side of the search bar */
 .icon {
   box-sizing: border-box;
   padding: 10px;
@@ -270,4 +288,40 @@ input[type=search] {
 .find:hover input {
   display: block;
 }
-
+/* ------------------------------ Trying out a different kind of button ---------------------------- */
+.breathing {
+  cursor: pointer;
+  width: 200px;
+  padding: 10px;
+  margin: 50px auto;
+  border: 1px solid #e9e9e9;
+  font-size: 30px;
+  background: #2d68c7;
+  color: #fff;
+  border-radius: 3px;
+  text-align: center; 
+  /* How fast is the breathing */
+  animation: breathing 4s ease-out infinite normal;
+  }
+@keyframes breathing {
+0% {
+  -webkit-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  transform: scale(0.6);
+}
+25% {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+50% {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+100% {
+  -webkit-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  transform: scale(0.6);
+}
+}

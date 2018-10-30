@@ -11,6 +11,7 @@ class Input extends Component {
             <input type="text" placeholder="Video Title"></input><br/>
             <input type="text" placeholder="Description"></input><br/>
             <button className="button-submit">Submit</button>
+            <button className="skills">Skills</button>
         </div>
         </div>
     )

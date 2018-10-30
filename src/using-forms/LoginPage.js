@@ -20,7 +20,8 @@ class LoginPage extends Component {
         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password here..."></input>
     </div><br/>
 
-    <button className="button-submit">Submit</button>
+    <button className="button-submit">Submit</button><br/>
+    <button className="breathing">Submit</button>
     <h5>sample text</h5>
     <h5>sample text</h5>
     <h5>sample text</h5>
@@ -34,9 +35,6 @@ class LoginPage extends Component {
     </form>
 
     </div>
-        // Not Registered? You can do so here.
-
-        
     )
     }
 }
