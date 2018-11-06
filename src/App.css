@@ -51,7 +51,7 @@
   color: transparent;
 }
 .logreg {
-  background-color: rgb(112, 146, 156);
+  background-color: rgb(99, 157, 175);
 }
 .developer {
   border: 1px solid black;
@@ -62,9 +62,6 @@
   cursor: pointer;
   height: 78px;
   background-color: lightblue;
-}
-.developer:hover {
-  opacity: 2;
 }
 /* --------------------------------------------------- Menu -------------------------------------------------------------- */
 #menuToggle
@@ -90,7 +87,6 @@
   z-index: 2; /* and place it over the hamburger */
   -webkit-touch-callout: none;
 }
-/* Just a quick hamburger */
 #menuToggle span
 {
   display: block;
@@ -143,7 +139,7 @@
   padding: 50px;
   padding-top: 125px;
   
-  background: #a7a7a7;
+  background: #628ba3;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   
@@ -164,7 +160,7 @@
   transform: none;
 }
 /* ------------------------------------- Animated buttons and input fields ------------------------------------------ */
-.button-submit {
+/* .button-submit {
   font-size: 1em;
   height: 50px;
   width: 10%;
@@ -201,7 +197,7 @@
 .button-submit:hover {
   transform-origin: center bottom;
 	transform: rotateX(-90deg) translateY(100%);
-}
+} */
 input[type=text] {
   width: 30%;
   font-size: 1em;
