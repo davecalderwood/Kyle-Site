@@ -7,11 +7,10 @@ class Input extends Component {
         <div className="filler">filler</div>
         <h1>Input video page</h1>
         <div className="information">
-            <input type="text" placeholder="Video URL"></input><br/>
-            <input type="text" placeholder="Video Title"></input><br/>
+            <input type="text" placeholder="Video URL" required></input><br/>
+            <input type="text" placeholder="Video Title" required></input><br/>
             <input type="text" placeholder="Description"></input><br/>
-            <button className="button-submit">Submit</button>
-            <button className="skills">Skills</button>
+            <button className="skills">Add Video</button>
         </div>
         </div>
     )

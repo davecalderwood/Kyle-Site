@@ -51,7 +51,7 @@
   color: transparent;
 }
 .logreg {
-  background-color: rgb(139, 156, 161);
+  background-color: rgb(112, 146, 156);
 }
 .developer {
   border: 1px solid black;
@@ -222,7 +222,7 @@ input[type=password] {
   color: rgb(0, 0, 0);
   background-color: rgb(76, 175, 158);
   border-radius: 15px;
-  box-shadow: 0 7px #999;
+  box-shadow: 0 4px #999;
   height: 30px;
   font-size: 1em;
 }
@@ -287,41 +287,4 @@ input[type=search] {
 /* It starts on a new line, and takes up the whole width */
 .find:hover input {
   display: block;
-}
-/* ------------------------------ Trying out a different kind of button ---------------------------- */
-.breathing {
-  cursor: pointer;
-  width: 200px;
-  padding: 10px;
-  margin: 50px auto;
-  border: 1px solid #e9e9e9;
-  font-size: 30px;
-  background: #2d68c7;
-  color: #fff;
-  border-radius: 3px;
-  text-align: center; 
-  /* How fast is the breathing */
-  animation: breathing 4s ease-out infinite normal;
-  }
-@keyframes breathing {
-0% {
-  -webkit-transform: scale(0.6);
-  -ms-transform: scale(0.6);
-  transform: scale(0.6);
-}
-25% {
-  -webkit-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  transform: scale(0.8);
-}
-50% {
-  -webkit-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  transform: scale(0.8);
-}
-100% {
-  -webkit-transform: scale(0.6);
-  -ms-transform: scale(0.6);
-  transform: scale(0.6);
-}
 }

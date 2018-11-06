@@ -25,6 +25,7 @@ class App extends Component {
             <div id="menuToggle">
 
               {/* The checkbox makes it clickable and the three span tags are the three lines that collapse into an X on click */}
+              {/* This is the hamburger menu */}
               <input type="checkbox" />
               <span></span>
               <span></span>
