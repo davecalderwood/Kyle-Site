@@ -4,7 +4,6 @@ import About from './component/About'
 import Contact from './component/Contact'
 import Videos from './component/Videos'
 import Forms from './using-forms/Forms'
-import loginPage from './using-forms/LoginPage'
 import Home from './component/Home'
 import Input from './using-forms/Forms'
 import './App.css';
@@ -16,7 +15,7 @@ class App extends Component {
 
       <Router>
       <div className="App">
-      <div class="box"><b></b></div>
+      {/* <div class="box"><b></b></div> */}
       {/* Create a basic framework for the site, I need a header with navigation, a footer with more navigaion */}
       {/* Hamburger menu with all of the navigation locations*/}     
         <div className="Header">
@@ -36,7 +35,6 @@ class App extends Component {
                 <a href="/about"><li>About</li></a>
                 <a href="/videos"><li>Videos</li></a>
                 <a href="/contact"><li>Contact</li></a>
-                <a href="/loginPage"><li>Sign In</li></a>
                 <a href="/input"><li>Add Video</li></a>
               </ul>
             </div>
@@ -57,7 +55,6 @@ class App extends Component {
           <Route path="/videos" component={Videos} />
           <Route path="/contact" component={Contact} />
           <Route path="/forms" component={Forms} />
-          <Route path="/loginPage" component={loginPage} />
           <Route path="/input" component={Input} />
         
         </div>
