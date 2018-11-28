@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import About from './component/About'
-import Contact from './component/Contact'
-import Videos from './component/Videos'
-import Forms from './using-forms/Forms'
-import Home from './component/Home'
-import Input from './using-forms/Forms'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Videos from './pages/Videos'
+import Forms from './usingforms/Forms'
+import Home from './pages/Home'
+import Input from './usingforms/Forms'
 import './App.css';
 
 
@@ -15,7 +15,6 @@ class App extends Component {
 
       <Router>
       <div className="App">
-      {/* <div class="box"><b></b></div> */}
       {/* Create a basic framework for the site, I need a header with navigation, a footer with more navigaion */}
       {/* Hamburger menu with all of the navigation locations*/}     
         <div className="Header">
@@ -35,15 +34,10 @@ class App extends Component {
                 <a href="/about"><li>About</li></a>
                 <a href="/videos"><li>Videos</li></a>
                 <a href="/contact"><li>Contact</li></a>
-                <a href="/input"><li>Add Video</li></a>
+                <a href="/input"><li>Manage Videos</li></a>
               </ul>
             </div>
           </nav>
-          
-          {/* <Link to="/loginPage">
-            <button type="button" className="loginButton">Login or Register
-            </button>
-            </Link> */}
           </div>
           
         </div>

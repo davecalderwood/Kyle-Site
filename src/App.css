@@ -54,14 +54,35 @@
   background-color: rgb(99, 157, 175);
 }
 .developer {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 10%;
   position: fixed;
   right: 0;
   top: 0;
   cursor: pointer;
-  height: 78px;
-  background-color: lightblue;
+  /* height: 78px; */
+  /* background-color: lightblue; */
+}
+.Modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  width: 500px;
+  height: 400px;
+}
+.addForm {
+  margin-left: 10px;
+}
+.createVid {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.card {
+  border: 1px solid black;
+  background-color: wheat;
+  width: 400px;
 }
 /* --------------------------------------------------- Menu -------------------------------------------------------------- */
 #menuToggle
@@ -160,44 +181,6 @@
   transform: none;
 }
 /* ------------------------------------- Animated buttons and input fields ------------------------------------------ */
-/* .button-submit {
-  font-size: 1em;
-  height: 50px;
-  width: 10%;
-	background: #4593b9;
-	color: #f2f2f2;
-	padding: -10px;
-	border-radius: 50px;
-	position: relative;
-	box-sizing: border-box;
-  transition: all 500ms ease; 
-  transform-style: preserve-3d;
-  cursor: pointer;
-}
-.button-submit:after {
-	top: 50%;
-  left: 0px;
-  border: 1px solid white;
-  width: 100%;
-  height: 50px;
-	position: absolute;
-  background: #3a9999;
-	border-radius: 50px;
-  content: 'Enter';
-  font-size: 1em;
-  vertical-align: middle;
-  align-content: center;
-  transform-origin: left bottom;
-  margin-top: -50px;
-  white-space: nowrap;
-  transform: rotateX(90deg);
-  cursor: pointer;
-  text-align: center;
-} 
-.button-submit:hover {
-  transform-origin: center bottom;
-	transform: rotateX(-90deg) translateY(100%);
-} */
 input[type=text] {
   width: 30%;
   font-size: 1em;
