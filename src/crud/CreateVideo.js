@@ -34,6 +34,7 @@ export default class CreateVideo extends Component {
 
     .then(res => res.json())
     .then(response => console.log('Success:', JSON.stringify(response)))
+    .then(this.setState({showModal: false}))
     .catch(error => console.error('Error:', error));
     console.log(result)
   }
