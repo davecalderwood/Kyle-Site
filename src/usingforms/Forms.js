@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CreateVideo from '../crud/CreateVideo';
-import DeleteVideo from '../crud/DeleteVideo';
+// import DeleteVideo from '../crud/DeleteVideo';
 // import UpdateVideo from '../crud/UpdateVideo';
 
 class ManageVideo extends Component {
@@ -19,8 +19,11 @@ class ManageVideo extends Component {
         return (
             <div>
                 <CreateVideo />
-                <DeleteVideo />
+                {/* <DeleteVideo /> */}
                 {/* <UpdateVideo /> */}
+                <form>
+                    <input type="search" placeholder="What are you looking for?"></input>
+                </form>
             </div>
         );
     }

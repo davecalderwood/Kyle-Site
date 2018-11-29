@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import Card from '../usingforms/Card';
 import DeleteVideo from '../crud/DeleteVideo';
 
 class Videos extends Component {
@@ -34,6 +33,7 @@ class Videos extends Component {
                 console.log("search: ", this.state.video)
             }
     }
+    // searcher refreshes the page after deletion
     searcher = (event) => {
         event.preventDefault()
         this.search()
@@ -48,35 +48,31 @@ class Videos extends Component {
                 </div>
                 <div>
                     {/* embed the video here */}
-                    {video.video_url}
+                    {/* {video.video_url} */}
+                    <iframe width="420" height="315" title="title" src="//www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+                    
                 </div>
                 <div>
                     <DeleteVideo id={video._id} refresh={this.search}/>
                 </div>
             </div>
         )})
-
-
-        // const videoURL = this.state.video.map(videos => videos.video_url)
-        // const URL = videoURL.replace("watch?v=", "embed/")
-        // console.log(videoURL.toString())
-        // URL to string
-        // const stringURL = videoURL.toString()
-        // const embed = stringURL.replace('watch?v=', 'embed/')
-        // const arrayURL = embed.split(",")
-        // console.log(embed)
-
     return (
         <div className="home parallax">
-        {/* <div className="filler">filler</div> */}
-            <form onSubmit={this.searcher}>
-                <input type="text" onChange={event => this.setState({search: event.target.value})}/>
-                <input className="skills" type="submit" value="Search"/>
+        <div className="filler">filler</div>
+            <form onSubmit={this.searcher} className="searchbar">
+                <input type="search" placeholder="What are you looking for?" onChange={event => this.setState({search: event.target.value})}/><br/>
+                {/* <input className="skills" type="submit" value="Search"/> */}
             </form>
+            <div class="item">
+
             <h2>{videoName}</h2>
-            {/* <Card /> */}
-            {/* <iframe width="560" height="315" src={videoURL} frameborder="0" title="UVU Player Profile 01 | Brianna Moeller"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+
+            </div>
+            <div>.</div>
+            <div>.</div>
+            <div>.</div>
+            <div>.</div>
         </div>
         );
     }
