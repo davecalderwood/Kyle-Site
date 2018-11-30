@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class DeleteVideo extends Component {
+export default class DeleteVideo extends Component {
 
   url = `http://localhost:4000/video/id/${this.props.id}`;
 
@@ -25,5 +25,3 @@ class DeleteVideo extends Component {
         );
     }
 }
-
-export default DeleteVideo;

@@ -3,7 +3,7 @@ import CreateVideo from '../crud/CreateVideo';
 // import DeleteVideo from '../crud/DeleteVideo';
 // import UpdateVideo from '../crud/UpdateVideo';
 
-class ManageVideo extends Component {
+export default class ManageVideo extends Component {
 
     grabVideo = async () => {
         await fetch('http://localhost:4000/video')
@@ -28,5 +28,3 @@ class ManageVideo extends Component {
         );
     }
 }
-
-export default ManageVideo;

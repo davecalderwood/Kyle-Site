@@ -1,7 +1,16 @@
 import React, { Component } from "react";
 import DeleteVideo from '../crud/DeleteVideo';
+import UpdateVideo from '../crud/UpdateVideo';
 
-class Videos extends Component {
+
+const iframeVideo = (props) => {
+    return(
+        // <iframe width="560" height="315" src={`https://www.youtube.com/embed/${props.video_url}`}  title="title" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src={`https://www.youtube.com/embed/${props.video_url}`} title={props.video_title} frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    )
+}
+
+export default class Videos extends Component {
     state = {
         video: [],
         search: ''
@@ -22,6 +31,9 @@ class Videos extends Component {
     // Search for a specific video(s)
     search = async () => {
         if (this.state.search === ''){
+            this.grabVideo()
+        }
+        else if (this.state.search === ' '){
             this.grabVideo()
         }
             else {
@@ -47,35 +59,33 @@ class Videos extends Component {
                     {video.video_title}
                 </div>
                 <div>
+                    {iframeVideo(video.video_url)}
                     {/* embed the video here */}
-                    {/* {video.video_url} */}
-                    <iframe width="420" height="315" title="title" src="//www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
-                    
+                    {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/ . stripslashes($row['videourl']) . '" title="title" frameborder="0" allowfullscreen></iframe> */}
                 </div>
                 <div>
                     <DeleteVideo id={video._id} refresh={this.search}/>
+                    <UpdateVideo id={video._id} refresh={this.search}/>
                 </div>
             </div>
         )})
     return (
-        <div className="home parallax">
+    <div className="home parallax">
         <div className="filler">filler</div>
             <form onSubmit={this.searcher} className="searchbar">
                 <input type="search" placeholder="What are you looking for?" onChange={event => this.setState({search: event.target.value})}/><br/>
-                {/* <input className="skills" type="submit" value="Search"/> */}
+                {/* <source src="/path/to/video/<?php echo $row_dis[video_path]; ?>" type="video/mp4"></source> */}
             </form>
             <div class="item">
 
-            <h2>{videoName}</h2>
+                <h2>{videoName}</h2>
 
             </div>
             <div>.</div>
             <div>.</div>
             <div>.</div>
             <div>.</div>
-        </div>
+    </div>
         );
     }
 }
-
-export default Videos; 
