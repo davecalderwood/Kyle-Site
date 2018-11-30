@@ -22,7 +22,7 @@ export default class UpdateVideo extends Component {
     url = `http://localhost:4000/video/id/${this.props.id}`;
 
   update = async (evt) => {
-    evt.preventDefault()
+    // evt.preventDefault()
       const result = await fetch(this.url, {
       method: 'PUT', 
       body: JSON.stringify({
@@ -35,6 +35,7 @@ export default class UpdateVideo extends Component {
     .then(res => res.json())
     .then(response => console.log('Success:', JSON.stringify(response)))
     .then(this.setState({showModal: false}))
+    .then(this.props.refresh())
     .catch(error => console.error('Error:', error));
     console.log(result)
   }
