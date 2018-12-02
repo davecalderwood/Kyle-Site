@@ -12,9 +12,10 @@ export default class DeleteVideo extends Component {
     .then(console.log(this.data))
     .then(res => res.json())
     .then(response => console.log('Success:', JSON.stringify(response)))
+    .then(this.props.refresh())
     .catch(error => console.error('Error:', error));
     console.log(result)
-    this.props.refresh()
+    // this.props.refresh()
   }
 
     render() {

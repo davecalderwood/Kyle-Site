@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import DeleteVideo from '../crud/DeleteVideo';
-import UpdateVideo from '../crud/UpdateVideo';
-
 
 const IframeVideo = (props) => {
     return(
@@ -61,8 +58,6 @@ export default class Videos extends Component {
                     <IframeVideo url={video.video_url}/>
                 </div>
                 <div>
-                    <DeleteVideo id={video._id} refresh={this.search}/>
-                    <UpdateVideo id={video._id} refresh={this.search}/>
                 </div>
             </div>
         )})
@@ -73,9 +68,7 @@ export default class Videos extends Component {
                 <input type="search" placeholder="What are you looking for?" onChange={event => this.setState({search: event.target.value})}/><br/>
             </form>
             <div class="item">
-
                 <h2>{videoName}</h2>
-
             </div>
             <div>.</div>
             <div>.</div>

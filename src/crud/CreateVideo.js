@@ -35,6 +35,7 @@ export default class CreateVideo extends Component {
     .then(res => res.json())
     .then(response => console.log('Success:', JSON.stringify(response)))
     .then(this.setState({showModal: false}))
+    .then(this.props.refresh())
     .catch(error => console.error('Error:', error));
     console.log(result)
   }
@@ -50,13 +51,19 @@ export default class CreateVideo extends Component {
           >
             <button onClick={this.handleCloseModal}>X</button>
             <form className="addForm" onSubmit={this.create}>
+            <center>
+            <h4>Remember don't use the entire URL.<br/> Use the tail end between = and &<br/> <br/>
+                https://www.youtube.com/watch?v=ZpdLuaX1iCI&t=1s <br/>
+                So here use: ZpdLuaX1iCI
+            </h4>
               <label>
                 <input type="text" placeholder="Video Name" 
-                onChange={event => this.setState({video_title: event.target.value})} /><br/>
+                onChange={event => this.setState({video_title: event.target.value})} required /><br/>
                 <input type="text" placeholder="Video URL" 
-                onChange={event => this.setState({video_url: event.target.value})}/><br/>
+                onChange={event => this.setState({video_url: event.target.value})} required /><br/>
               </label><br/>
               <input type="submit" value="Submit" />
+              </center>
             </form>
           </ReactModal>
         </div>

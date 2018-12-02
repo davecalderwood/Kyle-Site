@@ -50,15 +50,18 @@ export default class UpdateVideo extends Component {
              className="Modal"
           >
             <button onClick={this.handleCloseModal}>X</button>
+            <center>
+                <h3>Updating the video Name or URL requires both to be updated</h3>
             <form className="addForm" onSubmit={this.update}>
               <label>
                 <input type="text" placeholder="Video Name" 
-                onChange={event => this.setState({video_title: event.target.value})} /><br/>
+                onChange={event => this.setState({video_title: event.target.value})} required /><br/>
                 <input type="text" placeholder="Video URL" 
-                onChange={event => this.setState({video_url: event.target.value})}/><br/>
+                onChange={event => this.setState({video_url: event.target.value})} required /><br/>
               </label><br/>
               <input type="submit" value="Submit" />
             </form>
+            </center>
           </ReactModal>
         </div>
       );
